@@ -1,11 +1,9 @@
-﻿using MeuSindico.Domain.Entities.Base;
+﻿using MeuSindicoMS.Domain.Core.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MeuSindico.Domain.ValueObjects
+namespace MeuSindicoMS.Domain.ValueObjects
 {
-    public class Endereco : EntityBase
+    public class Endereco : Entity 
     {
         public string Logradouro { get; private set; }
         public string Numero { get; private set; }
@@ -32,8 +30,7 @@ namespace MeuSindico.Domain.ValueObjects
 
         // Construtor para o EF
         protected Endereco() { }
-        
-        /*
+      /*  
        public override bool EhValido()
        {
            RuleFor(c => c.Logradouro)
@@ -64,7 +61,8 @@ namespace MeuSindico.Domain.ValueObjects
 
            return ValidationResult.IsValid;
            return true;
-       } 
-        */
+       }
+       */
+     
     }
 }

@@ -16,12 +16,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2-CrossCutting", "5.2-CrossCutting", "{9A3744BA-15F3-43B8-8ADD-85DB64901D28}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1-Data", "5.1-Data", "{E383B6E8-6B27-4B0C-8A29-BF49D3AA88C0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Fonte completo zipado Ionic3XApiEmAspNetCoreDDD\YouLearn.Shared\Settings.cs = ..\..\Fonte completo zipado Ionic3XApiEmAspNetCoreDDD\YouLearn.Shared\Settings.cs
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuSindicoMS.Domain", "src\MeuSindicoMS.Domain\MeuSindicoMS.Domain.csproj", "{E9E91B8D-C237-4050-98B9-CDE9AB2C1B4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuSindicoMS.Domain", "src\MeuSindicoMS.Domain\MeuSindicoMS.Domain.csproj", "{E9E91B8D-C237-4050-98B9-CDE9AB2C1B4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuSindicoMS.Domain.Core", "src\MeuSindicoMS.Domain.Core\MeuSindicoMS.Domain.Core.csproj", "{3498E308-5B98-4D59-88D3-5B5E93DA720B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuSindicoMS.Domain.Core", "src\MeuSindicoMS.Domain.Core\MeuSindicoMS.Domain.Core.csproj", "{3498E308-5B98-4D59-88D3-5B5E93DA720B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuSindicoMS.ConsoleApp", "tests\MeuSindicoMS.ConsoleApp\MeuSindicoMS.ConsoleApp.csproj", "{2B4CCA0D-D77B-4933-940B-0D95D518E638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeuSindicoMS.ConsoleApp", "tests\MeuSindicoMS.ConsoleApp\MeuSindicoMS.ConsoleApp.csproj", "{2B4CCA0D-D77B-4933-940B-0D95D518E638}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

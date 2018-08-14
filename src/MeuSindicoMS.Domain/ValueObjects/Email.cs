@@ -1,10 +1,11 @@
-﻿using prmToolkit.NotificationPattern;
+﻿using FluentValidator;
+using MeuSindicoMS.Domain.Resources;
+using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
-using MeuSindico.Domain.Resources;
 
-namespace MeuSindico.Domain.ValueObjects
+namespace MeuSindicoMS.Domain.ValueObjects
 {
-    public class Email : Notifiable
+    public class Email : prmToolkit.NotificationPattern.Notifiable
     {
         protected Email()
         {
@@ -14,7 +15,7 @@ namespace MeuSindico.Domain.ValueObjects
         {
             Endereco = endereco;
 
-            new AddNotifications<Email>(this) //Adciona as notificações desse objeto (email) 
+            new AddNotifications<Email>(this)
                 .IfNotEmail(x => x.Endereco, MSG.X0_INVALIDO.ToFormat("E-mail"));
         }
 

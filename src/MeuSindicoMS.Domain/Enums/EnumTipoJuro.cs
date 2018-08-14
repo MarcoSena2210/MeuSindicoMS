@@ -1,4 +1,4 @@
-﻿namespace MeuSindico.Domain.Enums
+﻿namespace MeuSindicoMS.Domain.Enums
 {
     public enum EnumTipoJuro
     {

@@ -8,4 +8,17 @@
     <ProjectReference Include="..\MeuSindicoMS.Domain.Core\MeuSindicoMS.Domain.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Arguments\Edificio\" />
+    <Folder Include="Arguments\Imovel\" />
+    <Folder Include="Arguments\Empresa\" />
+    <Folder Include="Arguments\Morador\" />
+    <Folder Include="Arguments\Pessoa\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidator" Version="2.0.4" />
+    <PackageReference Include="prmToolkit.NotificationPattern" Version="1.0.20" />
+  </ItemGroup>
+
 </Project>

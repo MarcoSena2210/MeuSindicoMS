@@ -1,7 +1,7 @@
 ﻿using MeuSindicoMS.Domain.Core.Models;
 using System;
 
-namespace MeuSindicoMS.Domain.Models
+namespace MeuSindicoMS.Domain.Entities
 {
     public class Equipamento : Entity
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MeuSindico.Domain.ValueObjects
+namespace MeuSindicoMS.Domain.ValueObjects
 {
     // public static class CpfCnpjUtils
     public class CpfouCnpj

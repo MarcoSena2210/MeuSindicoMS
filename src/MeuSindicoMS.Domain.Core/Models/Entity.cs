@@ -3,11 +3,17 @@
 namespace MeuSindicoMS.Domain.Core.Models
 {
     /* Esta classe nunca poderá ser instanciada,apenas herdade */
-    public abstract  class Entity
+    public abstract  class Entity 
     {
+        public Entity()
+        {
+            InclusaoRegistro = DateTime.Now;
+        }
+
         /* protected porque apenas a classe que Herda de Entity 
          * pode alterá-la  */
         public Guid Id { get; protected set; }
+        public DateTime InclusaoRegistro { get; private set; }
 
         /* Como compara uma entidade com outra, se estamos falando da mesma entidade
          * para isso iremos fazer um reescrita do metodo equals.dessa forma conseguimos comprarar

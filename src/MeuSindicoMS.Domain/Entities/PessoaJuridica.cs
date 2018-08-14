@@ -1,12 +1,12 @@
-﻿using MeuSindico.Domain.ValueObjects;
+﻿using MeuSindicoMS.Domain.ValueObjects;
 using MeuSindicoMS.Domain.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MeuSindicoMS.Domain.Models
+namespace MeuSindicoMS.Domain.Entities
 {
-    public class PessoaJuridica :Pessoa : Entity
+    public class PessoaJuridica :Pessoa 
 
     {
         public string RazaoSocial { get; private set; }

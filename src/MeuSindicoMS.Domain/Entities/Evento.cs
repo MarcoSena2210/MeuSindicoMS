@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MeuSindicoMS.Domain.Models
+namespace MeuSindicoMS.Domain.Entities
 {
     public class Evento : Entity
     {

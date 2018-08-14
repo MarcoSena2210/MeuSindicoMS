@@ -1,10 +1,10 @@
-﻿using MeuSindico.Domain.Enums;
+﻿using MeuSindicoMS.Domain.Enums;
 using MeuSindicoMS.Domain.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MeuSindicoMS.Domain.Models
+namespace MeuSindicoMS.Domain.Entities
 {
     public class Imovel : Entity
     {

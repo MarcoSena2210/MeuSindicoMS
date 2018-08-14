@@ -1,8 +1,8 @@
-﻿using MeuSindico.Domain.Enums;
-using MeuSindico.Domain.ValueObjects;
+﻿using MeuSindicoMS.Domain.Enums;
+using MeuSindicoMS.Domain.ValueObjects;
 using MeuSindicoMS.Domain.Core.Models;
 
-namespace MeuSindicoMS.Domain.Models
+namespace MeuSindicoMS.Domain.Entities
 {
     public abstract class Pessoa :Entity
     {

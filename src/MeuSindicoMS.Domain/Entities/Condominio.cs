@@ -1,12 +1,13 @@
-﻿using MeuSindico.Domain.ValueObjects;
+﻿using MeuSindicoMS.Domain.ValueObjects;
+using MeuSindicoMS.Domain.Core.Models;
 using System;
 
-namespace MeuSindicoMS.Domain.Models
+namespace MeuSindicoMS.Domain.Entities
 {
-    public class Condominio
+    public class Condominio : Entity
     {
         public string RazaoSocial { get; private set; }
-        public Nome Nome { get; private set; }
+        public string Nome { get; private set; }
         public Guid EmpresaId { get; private set; }
         public virtual Empresa Empresa { get; private set; }
         public Email Email { get; private set; }
