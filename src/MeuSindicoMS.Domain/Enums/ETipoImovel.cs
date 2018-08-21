@@ -1,5 +1,5 @@
 ﻿namespace MeuSindicoMS.Domain.Enums
-{
+{ 
     public enum EnumTipoImovel
     {
         Apartamento = 1,

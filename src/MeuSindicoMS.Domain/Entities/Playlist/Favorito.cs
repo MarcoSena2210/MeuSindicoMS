@@ -1,15 +1,15 @@
-﻿using MeuSindicoMS.Domain.Entities.Base;
+﻿using MeuSindicoMS.Domain.Core.Models;
 
-namespace MeuSindicoMS.Domain.Entities
+namespace MeuSindicoMS.Domain.Entities.Playlist
 {
-    public class Favorito : EntityBase
+    public class Favorito : Entity
     {
         protected Favorito()
         {
 
         }
-        public Video Video { get; set; }
+        public Video Video { get; private set; }
 
-        public Usuario Usuario { get; set; }
+        public UsuarioPlaylist UsuarioPlaylist { get; private set; }
     }
 }

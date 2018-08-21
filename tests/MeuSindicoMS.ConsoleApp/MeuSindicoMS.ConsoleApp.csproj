@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="prmToolkit.NotificationPattern" Version="1.0.20" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\MeuSindicoMS.Domain\MeuSindicoMS.Domain.csproj" />
   </ItemGroup>
 

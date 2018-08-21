@@ -1,5 +1,6 @@
 ﻿using MeuSindicoMS.Domain.Arguments.Usuario;
 using MeuSindicoMS.Domain.Entities;
+using MeuSindicoMS.Domain.Entities.Playlist;
 using MeuSindicoMS.Domain.Interfaces.Repositories;
 using MeuSindicoMS.Domain.Interfaces.Services;
 using MeuSindicoMS.Domain.Resources;
@@ -12,10 +13,10 @@ namespace MeuSindicoMS.Domain.Services
     public class ServiceUsuario : Notifiable, IServiceUsuario
     {
         //Dependencias
-        private readonly IRepositoryUsuario _repositoryUsuario;
+        private readonly IRepositoryUsuarioPlaylist _repositoryUsuario;
 
         //Construtor
-        public ServiceUsuario(IRepositoryUsuario repositoryUsuario)
+        public ServiceUsuario(IRepositoryUsuarioPlaylist repositoryUsuario)
         {
             _repositoryUsuario = repositoryUsuario;
         }
@@ -32,16 +33,16 @@ namespace MeuSindicoMS.Domain.Services
             Email email = new Email(request.Email);
 
             //cria entidade
-            Usuario usuario = new Usuario(nome, email, request.Senha);
+            UsuarioPlaylist usuarioPlaylist = new UsuarioPlaylist(nome, email, request.Senha);
 
-            AddNotifications(usuario);
+            AddNotifications(usuarioPlaylist);
 
             if (this.IsInvalid()) return null;
 
             //Persiste no banco de dados
-            _repositoryUsuario.Salvar(usuario);
+            _repositoryUsuario.Salvar(usuarioPlaylist);
 
-            return new AdicionarUsuarioResponse(usuario.Id);
+            return new AdicionarUsuarioResponse(usuarioPlaylist.Id);
 
         }
         public AutenticarUsuarioResponse AutenticarUsuario(AutenticarUsuarioRequest request)
@@ -53,21 +54,21 @@ namespace MeuSindicoMS.Domain.Services
             }
 
             var email = new Email(request.Email);
-            var usuario = new Usuario(email, request.Senha);
+            var usuarioPlaylist = new UsuarioPlaylist(email, request.Senha);
 
-            AddNotifications(usuario);
+            AddNotifications(usuarioPlaylist);
 
             if (this.IsInvalid()) return null;
 
-            usuario = _repositoryUsuario.Obter(usuario.Email.Endereco, usuario.Senha);
+            usuarioPlaylist = _repositoryUsuario.Obter(usuarioPlaylist.Email.Endereco, usuarioPlaylist.Senha);
 
-            if (usuario == null)
+            if (usuarioPlaylist == null)
             {
                 AddNotification("Usuario", MSG.DADOS_NAO_ENCONTRADOS);
                 return null;
             }
 
-            var response = (AutenticarUsuarioResponse)usuario;
+            var response = (AutenticarUsuarioResponse)usuarioPlaylist;
 
             return response;
         }

@@ -1,6 +1,6 @@
 ﻿namespace MeuSindicoMS.Domain.Enums
 {
-    public enum EnumTipoCondominio
+    public enum ETipoCondominio
     {
         Residencial = 1,
         Trabalho = 2

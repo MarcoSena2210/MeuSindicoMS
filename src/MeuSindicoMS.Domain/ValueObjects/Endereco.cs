@@ -3,7 +3,7 @@ using System;
 
 namespace MeuSindicoMS.Domain.ValueObjects
 {
-    public class Endereco : Entity 
+    public class Endereco : ValueObject
     {
         public string Logradouro { get; private set; }
         public string Numero { get; private set; }
@@ -15,9 +15,9 @@ namespace MeuSindicoMS.Domain.ValueObjects
      
 
         
-        public Endereco(Guid id, string logradouro, string numero, string complemento, string bairro, string cep, string cidade, string estado)
+        public Endereco(string logradouro, string numero, string complemento, string bairro, string cep, string cidade, string estado)
         {
-            Id = id;
+            
             Logradouro = logradouro;
             Numero = numero;
             Complemento = complemento;

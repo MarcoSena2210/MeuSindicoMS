@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MeuSindicoMS.Domain.Entities.Playlist;
+using System;
 using System.Collections.Generic;
-using MeuSindicoMS.Domain.Entities;
 
 namespace MeuSindicoMS.Domain.Interfaces.Repositories
 {

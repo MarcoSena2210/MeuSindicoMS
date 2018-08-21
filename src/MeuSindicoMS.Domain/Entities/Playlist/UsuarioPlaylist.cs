@@ -1,19 +1,17 @@
-﻿using prmToolkit.NotificationPattern;
-using System;
-using System.Collections.Generic;
+﻿using MeuSindicoMS.Domain.Core.Models;
 using MeuSindicoMS.Domain.Extensions;
-using MeuSindicoMS.Domain.Entities.Base;
 using MeuSindicoMS.Domain.ValueObjects;
+using prmToolkit.NotificationPattern;
 
-namespace MeuSindicoMS.Domain.Entities
+namespace MeuSindicoMS.Domain.Entities.Playlist
 {
-    public class Usuario : EntityBase
+    public class UsuarioPlaylist : Entity
     {
-        protected Usuario()
+        protected UsuarioPlaylist()
         {
 
         }
-        public Usuario(Email email, string senha)
+        public UsuarioPlaylist(Email email, string senha)
         {
             Email = email;
             Senha = senha;
@@ -21,16 +19,18 @@ namespace MeuSindicoMS.Domain.Entities
             //Criptografo a senha
             Senha = Senha.ConvertToMD5();
 
-            AddNotifications(email);
+            AddNotifications(Email);
         }
 
-        public Usuario(Nome nome, Email email, string senha)
+       
+
+        public UsuarioPlaylist(Nome nome, Email email, string senha)
         {
             Nome = nome;
             Email = email;
             Senha = senha;
 
-            new AddNotifications<Usuario>(this).IfNullOrInvalidLength(x => x.Senha, 3, 32);
+            new AddNotifications<UsuarioPlaylist>(this).IfNullOrInvalidLength(x => x.Senha, 3, 32);
 
             //Criptografo a senha
             Senha = Senha.ConvertToMD5();

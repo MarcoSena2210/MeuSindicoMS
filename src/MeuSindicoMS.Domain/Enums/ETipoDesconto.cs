@@ -1,6 +1,6 @@
 ﻿namespace MeuSindicoMS.Domain.Enums
 {
-    public enum EnumTipoDesconto
+    public enum ETipoDesconto
     {
         Valor = 1,
         Percentual = 2

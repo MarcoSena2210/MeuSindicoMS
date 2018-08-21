@@ -1,18 +1,20 @@
-﻿using prmToolkit.NotificationPattern;
-using prmToolkit.NotificationPattern.Extensions;
-using MeuSindicoMS.Domain.Entities.Base;
+﻿using MeuSindicoMS.Domain.Core.Models;
 using MeuSindicoMS.Domain.Enums;
 using MeuSindicoMS.Domain.Resources;
+using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
+using MeuSindicoMS.Domain.Entities.Playlist;
 
-namespace MeuSindicoMS.Domain.Entities
+
+namespace MeuSindicoMS.Domain.Entities.Playlist
 {
-    public class Video : EntityBase
+    public class Video : Entity
     {
         protected Video()
         {
 
         }
-        public Video(Canal canal, PlayList playList, string titulo, string descricao, string tags, int? ordemNaPlayList, string idVideoYoutube, Usuario usuarioSugeriu)
+        public Video(Canal canal, PlayList playList, string titulo, string descricao, string tags, int? ordemNaPlayList, string idVideoYoutube, UsuarioPlaylist usuarioSugeriu)
         {
             Canal = canal;
             PlayList = playList;
@@ -22,7 +24,7 @@ namespace MeuSindicoMS.Domain.Entities
             OrdemNaPlayList = ordemNaPlayList.HasValue? ordemNaPlayList.Value : 0;
             IdVideoYoutube = idVideoYoutube;
             UsuarioSugeriu = usuarioSugeriu;
-            Status = EnumStatus.EmAnalise;
+            EStatus = EStatusAprovacao.EmAnalise;
 
             new AddNotifications<Video>(this)
                 .IfNullOrInvalidLength(x => x.Titulo, 1, 200, MSG.X0_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES.ToFormat("Titulo", "1", "200"))
@@ -46,8 +48,8 @@ namespace MeuSindicoMS.Domain.Entities
         public string Tags { get; private set; }
         public int OrdemNaPlayList { get; private set; }
         public string IdVideoYoutube { get; private set; }
-        public Usuario UsuarioSugeriu { get; private set; }
-        public EnumStatus Status { get; private set; }
+        public UsuarioPlaylist UsuarioSugeriu { get; private set; }
+        public EStatusAprovacao EStatus { get; private set; }
 
     }
 }

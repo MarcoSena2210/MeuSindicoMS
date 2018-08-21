@@ -1,13 +1,14 @@
 ﻿using System;
 using MeuSindicoMS.Domain.Entities;
+using MeuSindicoMS.Domain.Entities.Playlist;
 
 namespace MeuSindicoMS.Domain.Interfaces.Repositories
 {
-    public interface IRepositoryUsuario
+    public interface IRepositoryUsuarioPlaylist
     {
-        Usuario Obter(Guid id);
-        Usuario Obter(string email, string senha);
-        void Salvar(Usuario usuario);
+        UsuarioPlaylist Obter(Guid id);
+        UsuarioPlaylist Obter(string email, string senha);
+        void Salvar(UsuarioPlaylist usuarioPlaylist);
         bool Existe(string email);
     }
 }
